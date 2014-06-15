@@ -209,7 +209,7 @@ function clone_reddit_plugin_repo {
     clone_reddit_repo $1 reddit/reddit-plugin-$1
 }
 
-clone_reddit_repo reddit reddit/reddit
+clone_reddit_repo reddit iandennismiller/reddit
 clone_reddit_repo i18n reddit/reddit-i18n
 clone_reddit_plugin_repo about
 clone_reddit_plugin_repo liveupdate
@@ -263,7 +263,7 @@ rabbitmqctl set_permissions -p / reddit ".*" ".*" ".*"
 function install_reddit_repo {
     cd $REDDIT_HOME/src/$1
     sudo -u $REDDIT_USER python setup.py build
-    python setup.py develop --no-deps
+    python setup.py develop
 }
 
 install_reddit_repo reddit/r2
