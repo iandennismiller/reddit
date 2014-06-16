@@ -176,7 +176,7 @@ class Reddit(Templated):
 
     create_reddit_box  = True
     submit_box         = True
-    footer             = True
+    footer             = False
     searchbox          = True
     extension_handling = True
     enable_login_cover = True
