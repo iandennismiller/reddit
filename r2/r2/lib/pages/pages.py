@@ -176,7 +176,7 @@ class Reddit(Templated):
 
     create_reddit_box  = True
     submit_box         = True
-    footer             = False
+    footer             = True
     searchbox          = True
     extension_handling = True
     enable_login_cover = True
@@ -755,17 +755,16 @@ class RedditFooter(CachedTemplate):
                 ('buttons', [[(x.title, x.path) for x in y] for y in self.nav])]
 
     def __init__(self):
-        self.nav = [
-            NavMenu([
-                    OffsiteButton(_("general"), dest = "/wiki/about", nocname=True),
-                    #OffsiteButton(_("FAQ"), dest = "/wiki/faq", nocname=True),
-                    #NamedButton("rules", False, nocname=True),
-                    #NamedButton("contact", False),
-                ],
-                title = _("about"),
-                type = "flat_vert",
-                separator = ""),
-        ]
+        self.nav = [ ]
+            # NavMenu([
+            #         OffsiteButton(_("general"), dest = "/wiki/about", nocname=True),
+            #         #OffsiteButton(_("FAQ"), dest = "/wiki/faq", nocname=True),
+            #         #NamedButton("rules", False, nocname=True),
+            #         #NamedButton("contact", False),
+            #     ],
+            #     title = _("about"),
+            #     type = "flat_vert",
+            #     separator = ""),
         CachedTemplate.__init__(self)
 
 class ClickGadget(Templated):
