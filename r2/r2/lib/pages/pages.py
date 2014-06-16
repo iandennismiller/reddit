@@ -757,49 +757,14 @@ class RedditFooter(CachedTemplate):
     def __init__(self):
         self.nav = [
             NavMenu([
-                    NamedButton("blog", False, nocname=True),
-                    NamedButton("about", False, nocname=True),
-                    NamedButton("team", False, nocname=True, dest="/about/team"),
-                    NamedButton("code", False, nocname=True),
-                    NamedButton("advertising", False, nocname=True),
-                    NamedButton("jobs", False, nocname=True, dest="/r/redditjobs"),
+                    OffsiteButton(_("general"), dest = "/wiki/about", nocname=True),
+                    #OffsiteButton(_("FAQ"), dest = "/wiki/faq", nocname=True),
+                    #NamedButton("rules", False, nocname=True),
+                    #NamedButton("contact", False),
                 ],
                 title = _("about"),
                 type = "flat_vert",
                 separator = ""),
-
-            NavMenu([
-                    NamedButton("wiki", False, nocname=True),
-                    OffsiteButton(_("FAQ"), dest = "/wiki/faq", nocname=True),
-                    OffsiteButton(_("reddiquette"), nocname=True, dest = "/wiki/reddiquette"),
-                    NamedButton("rules", False, nocname=True),
-                    NamedButton("contact", False),
-                ],
-                title = _("help"),
-                type = "flat_vert",
-                separator = ""),
-
-            NavMenu([
-                    OffsiteButton("mobile", "http://i.reddit.com"),
-                    OffsiteButton(_("firefox extension"), "https://addons.mozilla.org/firefox/addon/socialite/"),
-                    OffsiteButton(_("chrome extension"), "https://chrome.google.com/webstore/detail/algjnflpgoopkdijmkalfcifomdhmcbe"),
-                    NamedButton("buttons", True),
-                    NamedButton("widget", True),
-                ],
-                title = _("tools"),
-                type = "flat_vert",
-                separator = ""),
-
-            NavMenu([
-                    NamedButton("gold", False, nocname=True, dest = "/gold/about", css_class = "buygold"),
-                    NamedButton("store", False, nocname=True),
-                    OffsiteButton(_("redditgifts"), "http://redditgifts.com"),
-                    OffsiteButton(_("reddit.tv"), "http://reddit.tv"),
-                    OffsiteButton(_("radio reddit"), "http://radioreddit.com"),
-                ],
-                title = _("<3"),
-                type = "flat_vert",
-                separator = "")
         ]
         CachedTemplate.__init__(self)
 
