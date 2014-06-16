@@ -35,11 +35,6 @@
       %endfor
   </div>
 
-  <p class="bottommenu">
-    &copy; ${_("%(year)d lexitrax.com All rights reserved.") % \
-    dict(year=datetime.datetime.now().timetuple()[0])}
-  </p>
-
   %if g.domain != "reddit.com":
     <!-- http://code.reddit.com/LICENSE see Exhibit B -->
     <a href="http://www.reddit.com/code/">
@@ -48,4 +43,9 @@
            style="width:140px; height:47px; margin-bottom: 5px"/>
     </a>
   %endif
+
+  <p class="bottommenu">
+    &copy; ${_("%(year)d lexitrax.com All rights reserved.") % \
+    dict(year=datetime.datetime.now().timetuple()[0])}
+  </p>
 </div>

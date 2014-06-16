@@ -1,3 +1,5 @@
+@color1: #eee;
+
 .box-sizing(@sizing) {
     box-sizing: @sizing;
     -webkit-box-sizing: @sizing;
@@ -209,7 +211,7 @@ ul.flat-vert {text-align: left;}
     border-bottom: 1px solid #5f99cf;
 
     position: relative;
-    background-color: #cee3f8;
+    background-color: @color1;
     z-index: 99;
 }
 
@@ -866,7 +868,7 @@ a.banned-user { color: red; }
 .flairselector img { margin: none; }
 
 .flairselector h2 {
-    background: #cee3f8;
+    background: @color1;
     padding-bottom: 2px;
     margin-bottom: 3px;
     text-align: center;
@@ -1079,7 +1081,7 @@ body.with-listing-chooser.explore-page #header .pagename {
 
 .explore-comment {
     .explore-label {
-        background-color: #cee3f8;
+        background-color: @color1;
         border: solid thin #5f99cf;
     }
     .tagline, .buttons, .thumbnail, .expando-button {
@@ -3574,7 +3576,7 @@ body.contact-us-page {
 .toolbar {
     font-size: small;
     border-bottom: 1px solid #336699;
-    background-color: #CEE3F8;
+    background-color: @color1;
 }
 
 .toolbar .left-side {
@@ -3642,7 +3644,7 @@ body.contact-us-page {
 }
 
 .toolbar .clickable:active, .pushed-button {
-    background-color: #cee3f8 !important;
+    background-color: @color1 !important;
     color: orangered !important;
 }
 
@@ -4560,7 +4562,7 @@ ul.tabmenu.formtab {
 /*** roundfield stuff *******/
 .roundfield {
     width: 500px;
-    background-color: #cee3f8;
+    background-color: @color1;
     border-radius: 4px;
     padding: 5px 10px 10px 10px;
     font-size: large;
@@ -4603,12 +4605,12 @@ ul.tabmenu.formtab {
     width: 514px;
     padding: 7px 5px;
     font-size: large;
-    background-color: #CEE3F8;
+    background-color: @color1;
     margin-bottom: 10px;
 }
 
 .linefield .title {
-    /*background-color:#CEE3F8;
+    /*background-color:@color1;
     /*background-color:#EFF7FF;*!/
     color: #336699;*/
     color: blue;
@@ -4633,7 +4635,7 @@ ul.tabmenu.formtab {
 }
 
 .linefield .linefield-content {
-    /*border-color:#CEE3F8;
+    /*border-color:@color1;
     /*border-color:#EFF7FE;*!/
     border-style:solid none none;
     border-width:4px medium medium;*/
@@ -5606,7 +5608,7 @@ dd { margin-left: 20px;  }
     text-align: center;
     padding: 0 1em;
     border: 1px solid white;
-    background-color: #CEE3F8;
+    background-color: @color1;
   }
 
   thead th.blank {
@@ -7494,7 +7496,7 @@ body:not(.gold) .allminus-link {
 
 .sr-interest-bar {
     position: relative;
-    background: #cee3f8 url(../snoo-upside-down.png) 15px top no-repeat;
+    background: @color1 url(../snoo-upside-down.png) 15px top no-repeat;
     padding: 5px;
     overflow: hidden;
     border: 1px solid #336699;
@@ -8263,7 +8265,7 @@ body.with-listing-chooser {
 
         &.selected {
             position: relative;
-            background: lighten(#cee3f8, 6%);
+            background: lighten(@color1, 6%);
             border-color: lighten(#369, 40%);
             margin-right: -@lc-grippy-width;
             padding-right: @lc-grippy-width;
