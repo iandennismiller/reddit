@@ -642,19 +642,19 @@ class Reddit(Templated):
         if c.site == Friends:
             main_buttons = [NamedButton('new', dest='', aliases=['/hot']),
                             NamedButton('comments'),
-                            NamedButton('gilded'),
+                            #NamedButton('gilded'),
                             ]
         else:
             main_buttons = [NamedButton('hot', dest='', aliases=['/hot']),
                             NamedButton('new'),
                             NamedButton('rising'),
                             NamedButton('controversial'),
-                            NamedButton('top'),
+                            #NamedButton('top'),
                             ]
 
-            if not isinstance(c.site, DomainSR):
-                main_buttons.append(NamedButton('gilded',
-                                                aliases=['/comments/gilded']))
+            #if not isinstance(c.site, DomainSR):
+            #    main_buttons.append(NamedButton('gilded',
+            #                                    aliases=['/comments/gilded']))
 
             mod = False
             if c.user_is_loggedin:
@@ -669,9 +669,9 @@ class Reddit(Templated):
 
         more_buttons = []
 
-        if c.user_is_loggedin:
-            if c.user.pref_show_promote or c.user_is_sponsor:
-                more_buttons.append(NavButton(menu.promote, 'promoted', False))
+        #if c.user_is_loggedin:
+        #    if c.user.pref_show_promote or c.user_is_sponsor:
+        #        more_buttons.append(NavButton(menu.promote, 'promoted', False))
 
         #if there's only one button in the dropdown, get rid of the dropdown
         if len(more_buttons) == 1:

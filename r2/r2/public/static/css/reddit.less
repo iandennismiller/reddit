@@ -1,4 +1,5 @@
-@color1: #ddd;
+@color1: #ccc;
+@button_bg: #eee;
 
 .box-sizing(@sizing) {
     box-sizing: @sizing;
@@ -240,7 +241,7 @@ ul.flat-vert {text-align: left;}
     position: absolute;
     right: 0px;
     bottom: 0px;
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     padding: 4px;
     line-height: 12px;
     border-top-left-radius: 7px;
@@ -370,7 +371,7 @@ ul.flat-vert {text-align: left;}
 }
 
 .dropdown.tabdrop .selected.title {
-    background-color: #eff7ff;
+    background-color: @button_bg;
     color: #369;
     padding-bottom: 0;
     border:none;
@@ -398,7 +399,7 @@ ul.flat-vert {text-align: left;}
 
 .tabmenu li a {
     padding: 2px 6px 0 6px;
-    background-color: #eff7ff;
+    background-color: @button_bg;
  }
 
 .tabmenu li.selected a{
@@ -1398,7 +1399,7 @@ body.with-listing-chooser.explore-page #header .pagename {
 
 .infotext { 
     border: 1px solid #369;
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     -webkit-box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.8), 0px 1px 0px hsla(0,0%,100%,.6);
     -moz-box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.8), 0px 1px 0px hsla(0,0%,100%,.6);
     box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.8), 0px 1px 0px hsla(0,0%,100%,.6);
@@ -1531,7 +1532,7 @@ body.with-listing-chooser.explore-page #header .pagename {
 .link.promotedlink.rejected { background-color: #FF9A9A; }
 .link.promotedlink.accepted { background-color: #9F9; }
 .link.promotedlink.pending  { background-color: #BFC; }
-.link.promotedlink.promoted { background-color: #EFF7FF; }
+.link.promotedlink.promoted { background-color: @button_bg; }
 .link.promotedlink.finished { background-color: #DDD; }
 #promo-form + form #img-preview-container { display: none; }
 
@@ -1555,11 +1556,11 @@ body.with-listing-chooser.explore-page #header .pagename {
 
 
 .help-cover.promoted {
-    background-color: #EFF7FF;
+    background-color: @button_bg;
 }
 
 .organic-listing .promoted {
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     border: none;
 }
 
@@ -2120,7 +2121,7 @@ textarea.gray { color: gray; }
 }
 
 .message .subject .correspondent {
-    background-color:#EFF7FF;
+    background-color:@button_bg;
     border:1px solid #336699;
     color:#336699;
     display:inline-block;
@@ -3583,12 +3584,12 @@ body.contact-us-page {
     height: 19px;
     float: left;
     border-right: solid #336699 1px;
-    background-color: #EFF7FF;
+    background-color: @button_bg;
 }
 
 .toolbar .middle-side {
     text-align: center;
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     cursor: pointer;
 }
 
@@ -3617,7 +3618,7 @@ body.contact-us-page {
 
 .toolbar .right-side {
     float: right;
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     margin-top: -1px;
     height: 19px;
 }
@@ -4332,7 +4333,7 @@ ul#image-preview-list .description pre {
  }
 
 .sr-row.sr-selected {
-    background: #EFF7FF none no-repeat scroll 0px 5px;
+    background: @button_bg none no-repeat scroll 0px 5px;
     background-image: url(../rightarrow.png);    /* SPRITE */
 }
 
@@ -4611,7 +4612,7 @@ ul.tabmenu.formtab {
 
 .linefield .title {
     /*background-color:@color1;
-    /*background-color:#EFF7FF;*!/
+    /*background-color:@button_bg;*!/
     color: #336699;*/
     color: blue;
     font-weight:bold;
@@ -4700,7 +4701,7 @@ ul.tabmenu.formtab {
 
 .campaign { 
     border: 1px solid #336699; 
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     width: 570px;
     padding: 5px;
     -webkit-box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.8), 0px 1px 0px hsla(0,0%,100%,.6);
@@ -5051,7 +5052,7 @@ div.timeseries span.title {
 }
 
 .promo-traffic-live {
-    background-color: #EFF7FF;
+    background-color: @button_bg;
 
     td {
         max-width: 150px;
@@ -5653,7 +5654,7 @@ dd { margin-left: 20px;  }
     }
 
     tr:nth-child(even) {
-        background-color: #EFF7FF;
+        background-color: @button_bg;
     }
 
     tr.total {
@@ -6239,7 +6240,7 @@ dd { margin-left: 20px;  }
 .linkinfo {
     padding: 5px;
     border: 1px solid #5f99cf;
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     font-family:arial,helvetica,sans-serif;
     font-size: larger;
     border-radius:3px;
@@ -6777,7 +6778,7 @@ body:not(.gold) .allminus-link {
 }
 
 .server-seconds {
-    background-color: #EFF7FF;
+    background-color: @button_bg;
     border: 1px solid #5F99CF;
     text-align: center;
 
