@@ -1,5 +1,6 @@
 @color1: #ccc;
 @button_bg: #eee;
+@link_color: darkgray;
 
 .box-sizing(@sizing) {
     box-sizing: @sizing;
@@ -75,14 +76,14 @@ input[type=hidden] { position: absolute; }
 
 h1 { font-size: 18px; font-weight: normal; margin: 10px 0 }
 
-h2 { color: #369; font-size: 13px; }
+h2 { color: @link_color; font-size: 13px; }
 h2 a { text-decoration: none }
-h2 a:visited { color: #369 }
+h2 a:visited { color: @link_color }
 h2 a:hover { text-decoration: underline }
 h3 { font-size:110%; /*text-transform:uppercase;*/ }
 
 a img { border: 0 none; }
-a { text-decoration: none; color: #369; }
+a { text-decoration: none; color: @link_color; }
 
 /*
 a:active { border: 0 none;}
@@ -103,7 +104,7 @@ div.autosize > div { display: table-cell; }
 
 input.txt {
     background-color:#f7f7f7;
-    border: 1px solid #369; 
+    border: 1px solid @link_color; 
 }
 
 input[type=checkbox], input[type=radio] { margin-top: .4em; }
@@ -372,7 +373,7 @@ ul.flat-vert {text-align: left;}
 
 .dropdown.tabdrop .selected.title {
     background-color: @button_bg;
-    color: #369;
+    color: @link_color;
     padding-bottom: 0;
     border:none;
 }
@@ -517,7 +518,7 @@ ul.flat-vert {text-align: left;}
     height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    color:#369;
+    color:@link_color;
 }
 
 .morelink:hover a {
@@ -759,7 +760,7 @@ body > .content .link.compressed .midcol {
 @moderator-color: #228822;
 
 .tagline { color:#888; font-size:x-small; }
-.tagline a {color: #369; text-decoration: none; }
+.tagline a {color: @link_color; text-decoration: none; }
 .tagline .friend    { color: orangered }
 .tagline .submitter { color: #0055df }
 .tagline .moderator, .green { color: @moderator-color }
@@ -902,7 +903,7 @@ a.banned-user { color: red; }
 }
 
 .flairselector li a {
-    color: #369 !important;
+    color: @link_color !important;
     font-weight: normal !important;
 }
 
@@ -1379,7 +1380,7 @@ body.with-listing-chooser.explore-page #header .pagename {
             height: 12px;
             line-height: 12px;
             background: white;
-            border: 1px solid lighten(#369, 20%);
+            border: 1px solid lighten(@link_color, 20%);
             border-radius: 2px;
             text-align: center;
             opacity: .65;
@@ -1398,7 +1399,7 @@ body.with-listing-chooser.explore-page #header .pagename {
 }
 
 .infotext { 
-    border: 1px solid #369;
+    border: 1px solid @link_color;
     background-color: @button_bg;
     -webkit-box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.8), 0px 1px 0px hsla(0,0%,100%,.6);
     -moz-box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.8), 0px 1px 0px hsla(0,0%,100%,.6);
@@ -1799,7 +1800,7 @@ body.with-listing-chooser.explore-page #header .pagename {
 }
 .md pre { margin: 10px; }
 .md blockquote, .help blockquote {
-    border-left: 2px solid #369;
+    border-left: 2px solid @link_color;
     padding-left: 4px; 
     margin: 5px;
     margin-right: 15px;
@@ -1837,7 +1838,7 @@ a.star { text-decoration: none; color: #ff8b60 }
 }
 
 .entry .buttons li a.nonbutton {
-    color: #369;
+    color: @link_color;
     font-weight: normal;
 }
 
@@ -1959,7 +1960,7 @@ a.star { text-decoration: none; color: #ff8b60 }
 .comment .expand:hover {
     text-decoration: none;
     color: white;
-    background-color: #369;
+    background-color: @link_color;
 }
 
 .comment .score { font-size: x-small; }
@@ -2502,12 +2503,12 @@ textarea.gray { color: gray; }
 /* search */
 
 #searchmenu { margin: 10px 0 0px 0; padding: 2px 0 0 0; 
-    border-bottom: 2px solid #369; 
+    border-bottom: 2px solid @link_color; 
     background-color: whitesmoke}
 
 #searchmenu .searchlabel { background-color: white; 
     padding: 2px 15px 0px 0px; 
-    font-weight: bold; color: #369 }
+    font-weight: bold; color: @link_color }
 
 #searchmenu .searchtime {
     font-weight: bold; 
@@ -3293,7 +3294,7 @@ body.rulespage-body {
     color: gray;
     text-align: center;
     margin: 1px;
-    color: #369;
+    color: @link_color;
 }
 
 button.button[disabled] {
@@ -3514,10 +3515,10 @@ body.contact-us-page {
     background-color: #cee2f5;
     font-size: x-large;
     font-weight: bold;
-    color: #369;
+    color: @link_color;
     text-align: center;
     border-radius: 7px;
-    border: 2px solid #369;
+    border: 2px solid @link_color;
     line-height: 1.5em;
     margin: 0px 10px 10px 10px;
 }
@@ -3761,7 +3762,7 @@ body.contact-us-page {
 
 .min-body .content {
     margin-top: 0px;
-    border-right: solid #369 1px;
+    border-right: solid @link_color 1px;
     min-height: 100%;
     max-width: 60em;
     overflow: auto;
@@ -3994,11 +3995,11 @@ div.banned-user .title {
 .stats { float: left; margin-right: 2em; border-collapse: collapse; font-size: larger; }
 .stats td.space {width: 20px}
 .stats td.sec { padding-bottom: 7px; font-size : 18px; font-weight: normal }
-.stats a {color: #369}
+.stats a {color: @link_color}
 .stats a:hover {text-decoration: underline;}
 .stats td.k { color: gray }
 .stats th { text-align: left; background-color: whitesmoke; 
-            color: #369; font-weight: bold;}
+            color: @link_color; font-weight: bold;}
 .stats td.ri { padding-left: 20px; text-align: right}
 
 .thumbnail {
@@ -4202,14 +4203,14 @@ ul#image-preview-list .description pre {
 
 .srdrop .choice.top-option {
     font-style: italic;
-    border-bottom: 1px dotted #369;
+    border-bottom: 1px dotted @link_color;
 }
 
 
 
 .srdrop .choice.bottom-option {
     font-style: italic;
-    border-top: 1px dotted #369;
+    border-top: 1px dotted @link_color;
 }
 
 .sr-bar .separator {color: gray; }
@@ -4365,7 +4366,7 @@ ul#image-preview-list .description pre {
  }
 
 .sr-name-row.sr-selected {
-    background-color: #369;
+    background-color: @link_color;
     color: white;
 }
 
@@ -4492,7 +4493,7 @@ ul.tabmenu.formtab {
 .link .usertext .md {
     padding: 0 5px;
     background-color: #fafafa;
-    border: 1px solid #369;
+    border: 1px solid @link_color;
     border-radius: 7px;
 }
 
@@ -4753,7 +4754,7 @@ ul.tabmenu.formtab {
 
 .existing-campaigns > table > tbody > tr > td { 
     text-align: center;
-    border: 1px solid #369;
+    border: 1px solid @link_color;
     padding: 5px;
     max-width: 120px;
 }
@@ -4765,7 +4766,7 @@ ul.tabmenu.formtab {
     text-align: center;
     font-weight: bold;
     padding: 1px 5px;
-    border: solid #369;
+    border: solid @link_color;
     border-width: 0px 1px 1px;
 }
 .existing-campaigns > table > tbody > tr > th:first-child,
@@ -5259,7 +5260,7 @@ table.lined-table {
      position: absolute;
      top: -20px;
      left: 17px;
-     border-color: transparent transparent #369;
+     border-color: transparent transparent @link_color;
  }
  .datepicker::after {
      content: ' ';
@@ -5414,7 +5415,7 @@ table.lined-table {
 }
 .date-input .drop-choices {  
     position: absolute;
-    border: 1px solid #369;
+    border: 1px solid @link_color;
     background-color: #E5F2FF;
     margin: 10px 3px;
 }
@@ -5991,7 +5992,7 @@ dd { margin-left: 20px;  }
     }
     
     .more {
-        color: #369;
+        color: @link_color;
         cursor: pointer;
         display: inline-block;
         font-weight: bold;
@@ -7324,7 +7325,7 @@ body:not(.gold) .allminus-link {
 }
 
 .api-help .endpoint em.placeholder {
-    color: #369;
+    color: @link_color;
 }
 
 .api-help .endpoint, .api-help .section .description {
@@ -7368,7 +7369,7 @@ body:not(.gold) .allminus-link {
 }
 
 .api-help .endpoint h3, .api-help .endpoint .uri-variants {
-    color: #369;
+    color: @link_color;
     margin-bottom: .5em;
 }
 
@@ -8267,7 +8268,7 @@ body.with-listing-chooser {
         &.selected {
             position: relative;
             background: lighten(@color1, 6%);
-            border-color: lighten(#369, 40%);
+            border-color: lighten(@link_color, 40%);
             margin-right: -@lc-grippy-width;
             padding-right: @lc-grippy-width;
             box-shadow: -30px 0 30px -15px rgba(255, 255, 255, .5) inset,
@@ -8288,7 +8289,7 @@ body.with-listing-chooser {
                 content: '';
                 border: @size solid ~"transparent";
                 border-style: solid solid outset; // mitigates firefox drawing a thicker arrow
-                border-left-color: lighten(#369, 25%);
+                border-left-color: lighten(@link_color, 25%);
             }
         }
 
