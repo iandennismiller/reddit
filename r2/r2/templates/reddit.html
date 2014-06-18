@@ -130,7 +130,7 @@
   <%include file="redditheader.html"/>
 
   %if thing.show_sidebar:
-    <div class="side">
+    <div class="side" style="display:none">
       ${sidebar(content = thing.rightbox())}
     </div>
   %endif
